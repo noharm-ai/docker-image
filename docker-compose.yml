@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: db
+    image: db-noharm
+    ports:
+      - "5432:5432"
+    networks:
+      - net-noharm
+      
+  backend-noharm:
+    container_name: backend
+    image: backend-noharm
+    ports:
+      - 5000:5000
+    networks:
+      - net-noharm
+
+networks:
+  net-noharm:
+    driver: bridge
