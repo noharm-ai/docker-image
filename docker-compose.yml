@@ -2,24 +2,21 @@ version: '3.1'
 
 services:
   db:
-    container_name: db
-    image: db-noharm
+    build: ./database
     ports:
       - "5432:5432"
     networks:
       - net-noharm
       
   backend-noharm:
-    container_name: backend
-    image: backend-noharm
+    build: ./backend
     ports:
       - 5000:5000
     networks:
       - net-noharm
 
   frontend-noharm:
-    container_name: frontend
-    image: frontend-noharm
+    build: ./frontend
     ports:
       - 80:8080
     networks:
