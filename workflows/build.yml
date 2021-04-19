@@ -1,0 +1,24 @@
+name: Build
+on:
+    push:
+      branches: [ master ] 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Git Clone Backend
+        run: |
+        git clone git@github.com:ivanjrju/backend.git
+
+      - name: Git Clone Frontend
+        run: |
+        git clone git@github.com:ivanjrju/frontend.git
+      
+      - name: Git Clone Database
+        run: |
+        git clone git@github.com:ivanjrju/database.git
+
+      - name: Run Docker Compose
+        run: docker-compose up -d --build
