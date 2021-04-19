@@ -9,16 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Git Clone Backend
-        run: |
-        git clone git@github.com:ivanjrju/backend.git
-
+        run:  git clone git@github.com:noharm-ai/backend.git
       - name: Git Clone Frontend
-        run: |
-        git clone git@github.com:ivanjrju/frontend.git
-      
+        run: git clone git@github.com:noharm-ai/frontend.git
       - name: Git Clone Database
-        run: |
-        git clone git@github.com:ivanjrju/database.git
-
+        run: git clone git@github.com:noharm-ai/database.git
       - name: Run Docker Compose
         run: docker-compose up -d --build
