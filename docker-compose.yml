@@ -17,13 +17,13 @@ services:
     networks:
       - net-noharm
 
-  frontend-noharm:
-    build: ./frontend
-    container_name: frontend
-    ports:
-      - 80:80
-    networks:
-      - net-noharm
+#  frontend-noharm:
+#    build: ./frontend
+#    container_name: frontend
+#    ports:
+#      - 80:80
+#    networks:
+#      - net-noharm
 
 
 networks:
