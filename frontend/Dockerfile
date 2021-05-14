@@ -1,7 +1,6 @@
 FROM node:12 as build-deps
 WORKDIR /usr/src/app
 RUN git clone https://github.com/noharm-ai/frontend .
-COPY package.json yarn.lock ./
 RUN yarn
 COPY . ./
 RUN yarn build
