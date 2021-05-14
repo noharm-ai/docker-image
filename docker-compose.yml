@@ -21,7 +21,7 @@ services:
     build: ./frontend
     container_name: frontend
     ports:
-      - 80:8080
+      - 80:80
     networks:
       - net-noharm
 
