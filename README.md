@@ -11,7 +11,7 @@ A Dockerfile for building the official NoHarm docker image
 ## Run Docker
 
 ```
-$ git clone https://github.com/noharm-ai/docker-image
+$ git clone --recurse-submodules https://github.com/noharm-ai/docker-image
 $ cd docker-image
 $ docker-compose up -d --build
 ```
