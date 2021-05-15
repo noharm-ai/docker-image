@@ -17,7 +17,7 @@ jobs:
       - name: Test Backend Service
         run: |
             sleep 5
-            curl -k http://localhost:5000/
+            curl -k http://localhost:5000/version
       - name: Test GetName Service
         run: |
             sleep 5
