@@ -14,3 +14,11 @@ jobs:
           submodules: recursive
       - name: Run Docker Compose
         run: docker-compose up -d --build
+      - name: Test Backend Service
+        run: |
+            sleep 5
+            curl -k http://localhost:5000/
+      - name: Test GetName Service
+        run: |
+            sleep 5
+            curl -k https://localhost/
