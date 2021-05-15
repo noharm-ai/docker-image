@@ -1,0 +1,3 @@
+[submodule "getname-api"]
+	path = getname-api
+	url = https://github.com/noharm-ai/getname-api

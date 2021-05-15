@@ -25,6 +25,14 @@ services:
     networks:
       - net-noharm
 
+  frontend-noharm:
+    build: ./getname-api
+    container_name: getname
+    ports:
+      - 443:443
+    networks:
+      - net-noharm
+
   nifi:
     image: apache/nifi:1.12.1
     ports:
