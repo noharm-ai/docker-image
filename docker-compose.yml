@@ -25,7 +25,7 @@ services:
     networks:
       - net-noharm
 
-  frontend-noharm:
+  getname-noharm:
     build: ./getname-api
     container_name: getname
     ports:
